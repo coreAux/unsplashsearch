@@ -2,6 +2,46 @@
 
 body {
   font-family: Arial, sans-serif;
-  font-size: 24px;
-  line-height: 1.25;
+  font-size: 16px;
+  line-height: 1.5;
+
+  background-color: #fff;
+  color: #333;
+  width: 100vw;
+}
+
+form {
+}
+
+input {
+  width: 100%;
+  border: none;
+  background-color: #eee;
+  padding: 16px 32px;
+  outline: none;
+}
+
+section.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 32px 32px;
+  padding: 32px;
+}
+
+div.single-result div.image {
+  background-color: #eee;
+  height: 400px;
+  margin: 0 0 16px 0;
+}
+
+div.single-result span.loading {
+  background-color: #eee;
+  height: 12px;
+  width: 50%;
+  display: inline-block;
+  margin: 0 0 8px 0;
+}
+
+div.single-result p span.loading {
+  width: 30%;
 }
