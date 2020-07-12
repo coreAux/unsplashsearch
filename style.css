@@ -1,5 +1,14 @@
 @import "reset.css";
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
 body {
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -8,9 +17,6 @@ body {
   background-color: #fff;
   color: #333;
   width: 100vw;
-}
-
-form {
 }
 
 input {
@@ -26,12 +32,21 @@ section.results {
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   grid-gap: 32px 32px;
   padding: 32px;
+  font-size: 12px;
 }
 
 div.single-result div.image {
   background-color: #eee;
   height: 400px;
   margin: 0 0 16px 0;
+  padding: 32px;
+}
+
+div.single-result img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: fadeIn 1s 0.5s both;
 }
 
 div.single-result span.loading {
@@ -44,4 +59,19 @@ div.single-result span.loading {
 
 div.single-result p span.loading {
   width: 30%;
+}
+
+div.single-result h2 {
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  section.results {
+    padding: 10px 0 0 0;
+  }
+
+  div.single-result h2,
+  div.single-result p {
+    margin: 10px;
+  }
 }
